@@ -1,0 +1,79 @@
+.produtos-container h1 {
+  color: #116A2F;
+  text-align: center;
+  line-height: 0.8;
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-family: poppins, sans-serif;
+  font-weight: 800;
+  margin-bottom: 0;
+  margin-top: 150px;
+}
+
+.produtos-container p {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 2.3rem;
+  letter-spacing: 10px;
+  font-family: muller, sans-serif;
+}
+
+.produtos-carrossel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    width: 40%;
+    border-radius: 10px;
+}
+
+.carousel-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #116A2F;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+
