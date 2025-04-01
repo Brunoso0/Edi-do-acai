@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+
+@font-face {
+  font-family: 'Muller';
+  src: url('./assets/fonts/Muller-Thin-DEMO.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller-bold';
+  src: url('./assets/fonts/Muller-ExtraBold-DEMO.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller-regular';
+  src: url('./assets/fonts/MullerRegular.ttf');
+  font-weight: 200;
+  font-style: normal;
+}

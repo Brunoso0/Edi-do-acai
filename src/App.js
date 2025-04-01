@@ -6,8 +6,7 @@ import Home from "./pages/Home";
 import QuemSomos from "./pages/QuemSomos";
 import NossaFabrica from "./pages/NossaFabrica";
 import Produtos from "./pages/Produtos";
-import Franquias from "./pages/Franquias";
-import Contato from "./pages/Contato";
+import Franquias from "./pages/Franquias"; 
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
       <NossaFabrica />
       <Produtos />
       <Franquias />
-      <Contato />
       <Footer />
     </Router>
   );

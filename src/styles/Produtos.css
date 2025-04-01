@@ -1,79 +1,347 @@
-.produtos-container h1 {
-  color: #116A2F;
+/* ===========================
+  Packaged Products Section
+  =========================== */
+.packaged-products-section {
   text-align: center;
-  line-height: 0.8;
-  text-transform: uppercase;
-  font-size: 6rem;
-  font-family: poppins, sans-serif;
-  font-weight: 800;
-  margin-bottom: 0;
+  padding: 0 20px;
   margin-top: 150px;
+  padding-bottom: 50px;
+  position: relative;
+  overflow: hidden;
 }
 
-.produtos-container p {
-  text-align: center;
-  margin-top: 5px;
-  font-size: 2.3rem;
-  letter-spacing: 10px;
-  font-family: muller, sans-serif;
-}
-
-.produtos-carrossel {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
+.packaged-products-section h1 {
+    font-size: 4rem;
+    color: #116A2F;
+    margin: 4rem 0 0 0;
+    line-height: 0.8;
+    text-transform: uppercase;
     text-align: center;
-    border-radius: 10px;
-    margin: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
 }
 
-.carousel-item img {
-    max-width: 100%;
-    width: 40%;
-    border-radius: 10px;
+.subtitle-product {
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 12px;
+    text-align: center;
+    color: #353535;
+    font-family: Muller-regular, sans-serif;
 }
 
-.carousel-item h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+/* ===========================
+  Swiper Container Styles
+  =========================== */
+.swiper-container-custom {
+  width: 50%;
+  padding: 60px 0;
 }
 
-.carousel-item p {
-    font-size: 1em;
-    color: #666;
+.swiper-container-custom .swiper-slide {
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.custom-arrow {
-  position: absolute;
+/* ===========================
+  Product Item Styles
+  =========================== */
+.product-item-custom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-image-custom {
+  width: 250px;
+  height: auto;
+  transition: transform 0.6s ease-in-out;
+}
+
+.product-text {
+  transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+  margin-top: 0;
+}
+
+.swiper-slide-active .product-text {
+  color: #116A2F;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.swiper-slide-active .product-name-custom {
+  color: #116A2F;
+  margin-top: 20px;
+}
+
+.product-name-custom {
+  font-family: bahnschrift, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.product-subtitle-custom {
+  font-family: bahnschrift, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 5px 20px;
+  margin: 0;
+  background-color: #2C2B2B;
+}
+
+/* ===========================
+  Swiper Slide Active/Inactive
+  =========================== */
+.swiper-slide-active .product-image-custom {
+  transform: scale(1.3);
+  opacity: 1;
+}
+
+.swiper-slide:not(.swiper-slide-active) .product-image-custom {
+  transform: scale(0.8);
+  opacity: 0.8;
+}
+
+/* ===========================
+  Swiper Navigation Buttons
+  =========================== */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333;
+  font-size: 20px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: transparent;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   color: #116A2F;
-  border: none;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 2;
-  border-radius: 50%;
 }
 
-.left-arrow {
-  left: 10px;
+/* ===========================
+  Decorative Elements (Folhas)
+  =========================== */
+.folha1 {
+  position: absolute;
+  top: 0;
+  right: 31%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-.right-arrow {
-  right: 10px;
+.folha2 {
+  position: absolute;
+  top: 50%;
+  right: 46%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.folha3 {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  filter: blur(3px);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.folha3 img {
+  width: 15%;
+  height: auto;
+}
+
+.folha4 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 60%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+.folha4 img {
+  width: 15%;
+  height: auto;
+}
+
+.qualidade {
+  position: absolute;
+  top: 0;
+  left: 23%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.qualidade img {
+  width: 4%;
+  height: auto;
+}
+
+/* ===========================
+  Media Queries
+  =========================== */
+
+/* ===========================
+  📱 Mobile (até 768px)
+=========================== */
+@media (max-width: 768px) {
+  .packaged-products-section {
+    padding: 10px;
+    margin-top: 40px;
+  }
+
+  .packaged-products-section h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle-product {
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+
+  .swiper-container-custom {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .product-image-custom {
+    width: 130px;
+  }
+
+  .product-name-custom {
+    font-size: 14px;
+  }
+
+  .product-subtitle-custom {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 14px;
+  }
+
+  .swiper-slide-active .product-image-custom {
+    transform: scale(1.1);
+  }
+
+  .swiper-slide:not(.swiper-slide-active) .product-image-custom {
+    transform: scale(0.6);
+  }
+
+  .folha1,
+  .folha2,
+  .folha3,
+  .folha4,
+  .qualidade {
+    display: none;
+  }
 }
 
 
+/* ===========================
+  📲 Tablet (769px - 1024px)
+=========================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .packaged-products-section {
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  .packaged-products-section h1 {
+    font-size: 3rem;
+  }
+
+  .subtitle-product {
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+  }
+
+  .swiper-container-custom {
+    width: 90%;
+    padding: 40px 0;
+  }
+
+  .product-image-custom {
+    width: 180px;
+  }
+
+  .product-name-custom {
+    font-size: 16px;
+  }
+
+  .product-subtitle-custom {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 18px;
+  }
+
+  .swiper-slide-active .product-image-custom {
+    transform: scale(1.2);
+  }
+
+  .swiper-slide:not(.swiper-slide-active) .product-image-custom {
+    transform: scale(0.75);
+  }
+
+  .folha1,
+  .folha2,
+  .folha3,
+  .folha4,
+  .qualidade {
+    display: none;
+  }
+}
+
+/* ===========================
+  💻 Desktop pequeno (1025px - 1280px)
+=========================== */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .swiper-container-custom {
+    width: 70%;
+    padding: 50px 0;
+  }
+
+  .packaged-products-section h1 {
+    font-size: 3.5rem;
+  }
+
+  .subtitle-product {
+    font-size: 1.3rem;
+    letter-spacing: 10px;
+  }
+
+  .product-image-custom {
+    width: 220px;
+  }
+
+  .product-name-custom {
+    font-size: 18px;
+  }
+
+  .product-subtitle-custom {
+    font-size: 14px;
+    padding: 5px 18px;
+  }
+
+  .swiper-slide-active .product-image-custom {
+    transform: scale(1.25);
+  }
+
+  .swiper-slide:not(.swiper-slide-active) .product-image-custom {
+    transform: scale(0.7);
+  }
+}

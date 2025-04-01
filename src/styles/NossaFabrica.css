@@ -1,127 +1,592 @@
+/* ============================
+  General Layout and Containers
+  ============================ */
+
 .fabric-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5f5f5;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 
+/* ============================
+  Banner Section
+  ============================ */
+
 .fabric-banner {
-    position: relative;;
-    width: 100%;
-    overflow-x: hidden;
-} 
+   position: relative;
+   width: 100%;
+   overflow-x: hidden;
+}
 
 .fabric-banner-arara {
-    position: absolute;
-    top: 10%;
-    left: 25%;
-    z-index: 100;
+   position: absolute;
+   top: 10%;
+   left: 25%;
+   z-index: 100;
 }
 
 .fabric-banner-arara img {
-    max-width: 250px;
-    width: 100%;
-    height: auto;
+   max-width: 250px;
+   width: 100%;
+   height: auto;
 }
 
 .fabric-banner-text {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    text-align: center;
-    background-color: #356C26;
-    color: #fff;
-    padding: 15px 90px;
-    z-index: 99;
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 100;
+   text-align: center;
+   background-color: #356C26;
+   color: #fff;
+   padding: 15px 90px;
+   z-index: 99;
 }
 
 .fabric-banner-text h1 {
-    font-size: 3.5em;
-    margin: 0;
-    font-family: poppins, sans-serif;
-    text-transform: uppercase;
-    margin: 0;
+   font-size: 3.5em;
+   margin: 0;
+   font-family: poppins, sans-serif;
+   font-weight: 900;
+   text-transform: uppercase;
 }
 
 .fabric-banner-text h4 {
-    font-size: 1em;
-    letter-spacing: 10px;
-    margin: 0;
-    font-family: muller, sans-serif;
-    font-weight: 100;
-    text-transform: uppercase;
-    margin: 0;
+   font-size: 1em;
+   letter-spacing: 10px;
+   margin: 0;
+   font-family: muller, sans-serif;
+   font-weight: 100;
+   text-transform: uppercase;
 }
 
-/* grid */
-
+/* ============================
+  Gallery Section
+  ============================ */
 
 .fabric-gallery-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: #ff7171;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 0 80px rgba(0, 0, 0, 0.247);
+   margin: 10px;
 }
 
 .fabric-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    width: 70%;
-  }
-  
-  .fabric-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 200px;
-    gap: 15px;
-    width: 80%;
-  }
-  
-  .fabric-gallery-item {
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  .fabric-gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  /* Tamanhos customizados para criar um efeito de galeria dinâmica */
-  .grid1-fabric {
-    grid-row: span 1;
-  }
-  
-  .grid2-fabric {
-    grid-column: span 1;
-    grid-row: span 2;
-  }
-  
-  .grid3-fabric {
-    grid-row: span 1;
-  }
-  
-  .grid4-fabric {
-    grid-row: span 2;
-  }
-  
-  .grid5-fabric {
-    grid-column: span 1;
-    grid-row: span 2;
-  }
-  
-  .grid6-fabric {
-    grid-row: span 1;
-  }
-  
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   width: 70%;
+}
+
+.button {
+   margin-top: 40px;
+}
+
+.fabric-gallery-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-auto-rows: 200px;
+   gap: 15px;
+   width: 80%;
+}
+
+.fabric-gallery-item {
+   overflow: hidden;
+   border-radius: 10px;
+}
+
+.fabric-gallery-item img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 10px;
+}
+
+.fabric-gallery-item img:hover {
+    transform: scale(1.15);
+    transition: all 0.5s ease;
+}
+
+/* Dynamic Gallery Grid Sizes */
+.grid1-fabric {
+   grid-row: span 1;
+}
+
+.grid2-fabric {
+   grid-column: span 1;
+   grid-row: span 2;
+}
+
+.grid3-fabric {
+   grid-row: span 1;
+}
+
+.grid4-fabric {
+   grid-row: span 2;
+}
+
+.grid5-fabric {
+   grid-column: span 1;
+   grid-row: span 2;
+}
+
+.grid6-fabric {
+   grid-row: span 1;
+}
+
+/* ============================
+  Button Styling
+  ============================ */
+
+.buttonn {
+   padding: 1.3em 3em;
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   font-weight: 500;
+   color: #000;
+   background-color: #fff;
+   border: none;
+   border-radius: 45px;
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s ease 0s;
+   cursor: pointer;
+   outline: none;
+}
+
+.buttonn:hover {
+   background-color: #356C26;
+   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+   color: #fff;
+   transform: translateY(-7px);
+}
+
+.buttonn:active {
+   transform: translateY(-1px);
+}
+
+/* ============================
+  Map Section
+  ============================ */
+
+/* Map Container */
+.fabric-map {
+  background-color: #d9d9d96b;
+   width: 100%;
+   margin-top: 60px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.fabric-map h2 {
+   font-size: 4rem;
+   color: #116A2F;
+   margin: 4rem 0 0 0;
+   line-height: 0.8;
+   text-transform: uppercase;
+   text-align: center;
+   font-family: "Poppins", sans-serif;
+   font-weight: 900;
+}
+
+.subtitle-fabric {
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 10px;
+    text-align: center;
+    font-family: Muller-regular, sans-serif;
+    color: #353535;
+}
+
+/* Map and Store Layout */
+.fabric-map-content {
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   gap: 60px;
+   padding: 40px;
+   flex-wrap: nowrap;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.fabric-map-content.ativo {
+   justify-content: space-between;
+}
+
+.map-container {
+   position: relative;
+   width: 600px;
+   max-width: 100%;
+   flex-shrink: 0;
+   transition: all 0.5s ease;
+}
+
+.map-container.centralizado {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+/* Map Image */
+.map-image {
+   width: 100%;
+   border-radius: 10px;
+   display: block;
+}
+
+/* Map Points */
+.map-point-wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.map-point {
+  width: 16px;
+  height: 16px;
+  background-color: #ff5a5f;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ícone escondido inicialmente */
+.map-icon {
+  opacity: 0;
+  font-size: 14px;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+/* Bolinha no hover vira marcador */
+.map-point-wrapper:hover .map-point {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 50px;
+  background-color: #e60023;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-50deg);
+  transform-origin: center center;
+}
+
+/* Mostra o ícone no hover */
+.map-point-wrapper:hover .map-icon {
+  opacity: 1;
+  transform: rotate(50deg);
+  position: absolute;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.map-icon img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+/* Efeito marcador com ponta para baixo no hover */
+
+
+
+
+/* Tooltip posicionada acima da bolinha */
+.tooltip {
+  position: absolute;
+  bottom: 100%; /* aparece acima do ponto */
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background-color: #33333373;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Mostra tooltip no hover */
+.map-point-wrapper:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-30%) translateY(-15px);
+}
+
+
+/* ============================
+  Store Info Section
+  ============================ */
+
+.lojas-container {
+   width: 400px;
+   min-height: 200px;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 0.3s ease;
+}
+
+.map-ativo .lojas-container {
+   opacity: 1;
+   pointer-events: all;
+}
+
+.loja-info {
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   border-radius: 12px;
+   animation: fadeIn 0.5s ease forwards;
+}
+
+.loja-info img {
+   width: 100%;
+   height: 220px;
+   object-fit: cover;
+   border-radius: 12px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.loja-texto h3 {
+   margin: 0;
+   font-size: 1.8rem;
+   color: #333;
+}
+
+.loja-texto p {
+   font-size: 1rem;
+   color: #555;
+   margin-top: 0.5rem;
+}
+
+.unit-card {
+  background: #fff;
+  margin-top: 50px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.unit-image img {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.unit-details h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.unit-address {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 8px 0 16px;
+}
+
+.unit-hours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.unit-hours li {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* ============================
+  Animations
+  ============================ */
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: translateX(20px);
+   }
+   to {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+@keyframes slideLeft {
+   from {
+      transform: translateX(0);
+      opacity: 1;
+   }
+   to {
+      transform: translateX(-40px);
+      opacity: 1;
+   }
+}
+
+@keyframes lojaFadeIn {
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+/* ============================
+  Responsive Design
+  ============================ */
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+   .fabric-gallery-grid {
+     grid-template-columns: repeat(2, 1fr);
+     width: 90%;
+   }
+ 
+   .fabric-map-content {
+     gap: 40px;
+     padding: 30px;
+   }
+ 
+   .map-container {
+     width: 500px;
+   }
+ 
+   .unit-card {
+     width: 360px;
+   }
+ 
+   .unit-image img {
+     height: 260px;
+   }
+ }
+ 
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+   .fabric-banner-arara img {
+     max-width: 200px;
+   }
+ 
+   .fabric-banner-text {
+     padding: 10px 60px;
+   }
+ 
+   .fabric-banner-text h1 {
+     font-size: 2.5rem;
+   }
+ 
+   .fabric-banner-text h4 {
+     font-size: 0.9rem;
+     letter-spacing: 8px;
+   }
+ 
+   .fabric-gallery-grid {
+     grid-template-columns: repeat(3, 1fr);
+     width: 100%;
+   }
+ 
+   .fabric-map h2 {
+     font-size: 2.8rem;
+   }
+ 
+   .fabric-map-content {
+     flex-direction: column;
+     align-items: center;
+     gap: 40px;
+   }
+ 
+   .map-container {
+     width: 90%;
+   }
+ 
+   .unit-card {
+     width: 90%;
+   }
+ 
+   .unit-image img {
+     height: 250px;
+   }
+ }
+ 
+
+  @media (max-width: 768px) {
+   .fabric-banner-arara {
+     left: 5%;
+   }
+ 
+   .fabric-banner-text {
+     padding: 10px 20px;
+     font-size: 0.9em;
+   }
+ 
+   .fabric-banner-text h1 {
+     font-size: 2rem;
+   }
+ 
+   .fabric-banner-text h4 {
+     font-size: 0.8rem;
+     letter-spacing: 5px;
+   }
+ 
+   .fabric-content {
+     width: 90%;
+     padding: 10px;
+   }
+ 
+   .fabric-gallery-grid {
+     grid-template-columns: 1fr;
+     width: 100%;
+   }
+ 
+   .fabric-map h2 {
+     font-size: 2rem;
+   }
+ 
+   .subtitle-fabric {
+     font-size: 1rem;
+     letter-spacing: 5px;
+   }
+ 
+   .fabric-map-content {
+     flex-direction: column;
+     gap: 30px;
+     padding: 20px;
+   }
+ 
+   .map-container {
+     width: 100%;
+   }
+ 
+   .unit-card {
+     width: 85%;
+   }
+ 
+   .unit-image img {
+     height: 220px;
+   }
+ 
+   .tooltip {
+     font-size: 10px;
+     padding: 2px 6px;
+   }
+ 
+   .map-point-wrapper:hover .tooltip {
+     transform: translateX(-30%) translateY(-10px);
+   }
+ }
+ 

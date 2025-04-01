@@ -5,13 +5,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
     margin-bottom: 50px;
+    padding-bottom: 5em;
+    padding-top: 2em;
+    background-color: #d9d9d96b;
 }
 
 .about-us h1 {
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 900;
     color: #116A2F;
     margin-bottom: 20px;
     font-family: poppins,   sans-serif;
@@ -23,7 +25,7 @@
     font-weight: 200;
     color: #353535;
     margin-bottom: 20px;
-    font-family: mulller, sans-serif;
+    font-family: Muller-regular, sans-serif;
     letter-spacing: 8px;
     margin: -25px 10px 10px 10px;
 }
@@ -52,7 +54,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.568);
     padding: 20px;
     text-align: center;
-    width: 300px;
+    width: 250px;
     height: 300px;
     position: relative;
     transition: transform 0.3s ease-in-out;
@@ -63,8 +65,8 @@
   }
   
   .card-icon {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     background: #004d00;
     border-radius: 50%;
     display: flex;
@@ -74,11 +76,12 @@
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.568);
   }
   
   .card-icon img {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
   }
   
   .card-about-us p {
@@ -90,14 +93,109 @@
     text-align: left;
   }
 
-  .card-1 p{
-    text-align: left;
-  }
-  .card-2 p{
-    text-align: center;
+  .card-2 p {
     font-size: 14px;
   }
 
-  .card-3 p{
-    text-align: right;
-   }
+
+  @media (max-width: 1024px) {
+    .about-us p {
+      width: 90%;
+    }
+
+    .about-us-cards {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .card-about-us {
+      width: 200px;
+      height: auto;
+      padding: 15px;
+    }
+
+    .card-about-us p {
+      font-size: 14px;
+    }
+
+    .card-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .card-icon img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-us h1 {
+      font-size: 2.5rem;
+    }
+
+    .about-us h5 {
+      font-size: 1.2rem;
+      letter-spacing: 5px;
+      margin-top: 0;
+    }
+
+    .about-us p {
+      font-size: 1rem;
+      width: 90%;
+    }
+
+    .card-about-us {
+      width: 180px;
+    }
+
+    .card-about-us p {
+      font-size: 12px;
+    }
+
+    .card-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .card-icon img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-us h1 {
+      font-size: 2rem;
+    }
+
+    .about-us h5 {
+      font-size: 1rem;
+      letter-spacing: 3px;
+      margin-top: 0;
+    }
+
+    .about-us p {
+      font-size: 0.9rem;
+    }
+
+    .about-us-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card-about-us {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .card-icon img {
+      width: 25px;
+      height: 25px;
+    }
+  }
